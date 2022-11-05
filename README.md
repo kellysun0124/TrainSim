@@ -1,2 +1,2 @@
 # GameByKRPY
- Transportation Themed Text Advanture Made by KRPY for TigerHacks 2022
+ Transportation Themed Text Advanture Made by Kelly Sun and Yvan Quinn for TigerHacks 2022
