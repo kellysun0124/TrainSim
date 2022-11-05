@@ -37,7 +37,7 @@ class RandPerson(Person):
             name = random.choice(boyNameList)
         #set origin and destination
         now_time = time.time()
-        past_station_times = [station_time if station_time < now_time - start_time for station_time in stationDict.values()]
+        past_station_times = [station_time for station_time in stationDict.values() if station_time < now_time - start_time ]
         stationList = list(stationDict)
         current_station_index = len(past_station_times)
         origin = random.choice(stationList[:current_station_index])
