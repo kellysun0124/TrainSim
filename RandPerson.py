@@ -1,4 +1,5 @@
 import random
+import time
 from Person import Person
 
 genderList = ["male", "female"]
@@ -25,7 +26,7 @@ stationDict = {
 moodList = ["angry", "sad"]
 
 class RandPerson(Person):
-    def __init__(self):
+    def __init__(self, start_time):
         #randome age
         age = random.randint(5, 90)
         #set gender and name based on gender
@@ -35,9 +36,13 @@ class RandPerson(Person):
         else:
             name = random.choice(boyNameList)
         #set origin and destination
+        now_time = time.time()
+        past_station_times = [station_time if station_time < now_time - start_time for station_time in stationDict.values()]
         stationList = list(stationDict)
-        origin = random.choice(stationList)
-        destination = random.choice(stationList[stationList.index(origin):])
+        current_station_index = len(past_station_times)
+        origin = random.choice(stationList[:current_station_index])
+        destination = random.choice(stationList[current_station_index + 1:])
+
         #mood
         mood = random.choice(moodList)
 
