@@ -41,7 +41,7 @@ class RandPerson(Person):
         stationList = list(stationDict)
         current_station_index = len(past_station_times)
         origin = random.choice(stationList[:current_station_index])
-        destination = random.choice(stationList[current_station_index + 1:])
+        destination = random.choice(stationList[current_station_index:])
 
         #mood
         mood = random.choice(moodList)
