@@ -18,10 +18,10 @@ def GetOnTrain():
             print("The automatic doors closes with a snap, and the train begins to leave the station.")
             print("You bailed on visiting Grandma.\nGAME OVER.")
             exit()
-    playsound('audio.m4a', False)
+    playsound('audio.mp3', False)
     start = time.time()
     while(time.time() - start < 2000):
-        Interaction()
+        Interaction(start)
     print("You missed your stop, the train has turned arround. You'll spend the next half our riding the train home in shame.")
     print("Grandma will be very disappointed.\nGAME OVER>")
     exit()
@@ -30,15 +30,16 @@ def GetOnTrain():
 
     
 
-def Interaction():
+def Interaction(start):
     OpenScript()
     print("You look around and see many passangers around you, some reading, others with earphones on.")
-    print("To look around at any point please input 'look out' or 'look out the window'.")
-    print("To talk to one of the passangers, please input 'talk to someone' or 'have a conversation with someone'.")
+    print("Sitting across from of you is a young woman and young man.")
+    print("To look around at any point please type 'look out' or 'look out the window'.")
+    print("To talk to one of the passangers, please input 'talk to someone'")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
     action = input("what would you like to do?")
-    if "talk" in action || "convers" in action:
-        Dialog()
+    if "talk" in action:
+        Dialog(start)
     
 
 

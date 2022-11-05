@@ -1,6 +1,5 @@
 import random
 import time
-from Person import Person
 
 genderList = ["male", "female"]
 girlNameList = ["Alice", "Kelly", "Pheobe", "Judy", "Lisa", "Tasha", "Rachel", "Jennie", "Natlie", "Sophia"]
@@ -23,9 +22,9 @@ stationDict = {
     "Shiodome" : 31,
     "Shimbashi" : 33
 }
-moodList = ["angry", "sad"]
+moodList = ["angry", "sad", "happy"]
 
-class RandPerson(Person):
+class RandPerson():
     def __init__(self, start_time):
         #randome age
         age = random.randint(5, 90)
