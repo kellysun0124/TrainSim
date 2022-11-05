@@ -1,2 +1,2 @@
-# TrainSim
-Text based real time simulation of Yurikamome Line made by Kelly and Yvan
+# GameByKRPY
+ Transportation Themed Text Advanture Made by KRPY for TigerHacks 2022
