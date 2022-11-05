@@ -37,12 +37,12 @@ def Interaction():
     print("To talk to one of the passangers, please input 'talk to someone' or 'have a conversation with someone'.")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
     action = input("what would you like to do?")
-    if "talk" in action || "conversation" in action:
-        Dialog() 
+    if "talk" in action || "convers" in action:
+        Dialog()
     
 
 
-def windowView()
+def windowView(start):
     print(open("ascii_stills/"+str(int((time.time()-start)/10)*10)+".txt").read())
 
 
