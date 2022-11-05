@@ -1,5 +1,5 @@
 class Person:
-    def __init__(self, name, gender, age, race, origin, destination, mood):
+    def __init__(self, name, gender, age, origin, destination, mood):
         self.__name = name
         self.__gender = gender
         self.__age = age

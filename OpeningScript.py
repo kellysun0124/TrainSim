@@ -1,1 +1,0 @@
-print("Hello! You are currently at Toyosu Station, a terminal stop of the Yurikamome Line.\n The New Transit Yurikamome is a driverless, automated transit service linking Shimbashi to Toyosu, via Odaiba across the Rainbow Bridge in Tokyo.\nYou are on your way to visit your grandma, so you'll want to get off at  station.")
