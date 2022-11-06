@@ -30,18 +30,23 @@ def Dialog(start_time):
                 print("You don't know if " + pronoun + " even heard you...")
 
         case "sad":
-            print("The stranger stares blankly out of the window, as if " + pronoun + " are a thousand miles away. \nAt your greeting " + pronoun + " blinks and stares at you startled.")
-            username = input("'Oh...Hi, where are my manners. I'm sorry about that. My name is " + name + ".  What is your name?'' \n")
-            visit = input("'Nice to meet you " + username + ". Are you visiting someone?'' \n")
-            if visit.lower() == "yes":
-                yesvisit = input("Oh, who are you visiting? \n")
-                if "gran" in yesvisit.lower():
-                    print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nShe's dying from cancer...'")
+            if (i == 1):
+                print("The stranger stares blankly out of the window, as if " + pronoun + " are a thousand miles away. \nAt your greeting " + pronoun + " blinks and stares at you startled.")
+                username = input("'Oh...Hi, where are my manners. I'm sorry about that. My name is " + name + ".  What is your name?'' \n")
+                visit = input("'Nice to meet you " + username + ". Are you visiting someone?'' \n")
+                if visit.lower() == "yes":
+                    yesvisit = input("Oh, who are you visiting? \n")
+                    if "gran" in yesvisit.lower():
+                        print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nShe's dying from cancer...'")
+                    else:
+                        print(name + "chokes, 'Oh... I'm on my way to my Gran Gran... in the hospital...\nShe's dying from cancer...'")
                 else:
-                    print(name + "chokes, 'Oh... I'm on my way to my Gran Gran... in the hospital...\nShe's dying from cancer...'")
-            else:
-                print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...")
-            print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and moves away from you...")           
+                    print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...")
+                print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and moves away from you...")
+            if (i == 2):
+                print("The stranger looks at you and sniffles.  You notice that their eyes were also red and puffy.")
+                tissue = input("Would you like to offer them some tissues?")
+
         case "happy":
             username = input("The stranger looks at you and asks you in a giddy voice. \n'Hello stranger, what's your name?'' \n")
             visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going?' \n")
