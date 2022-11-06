@@ -37,19 +37,65 @@ def Dialog(start_time):
                 print("You don't know if " + pronoun + " even heard you...")
 
         case "sad":
-            print("The "+age+"stranger stares blankly out of the window, as if " + pronoun + " are a thousand miles away. \nAt your greeting " + pronoun + " blinks and stares at you startled.")
-            username = input("'Oh...Hi, where are my manners. I'm sorry about that. My name is " + name + ".  What is your name?'' \n")
-            visit = input("'Nice to meet you " + username + ". Are you visiting someone?'' \n")
-            if visit.lower() == "yes":
-                yesvisit = input("Oh, who are you visiting? \n")
-                if "gran" in yesvisit.lower():
-                    print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nShe's dying from cancer...'")
-                else:
-                    print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...")
-                print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and moves away from you...")
+            if (i == 0):
+                print("The stranger stares blankly out of the window, as if " + pronoun + " are a thousand miles away. \nAt your greeting " + pronoun + " blinks and stares at you startled.")
+                username = input("'Oh...Hi, where are my manners. I'm sorry about that. My name is " + name + ".  What is your name?'' \n")
+                visit = input("'Nice to meet you " + username + ". Are you visiting someone?'' \n")
+                if visit.lower() == "yes":
+                    yesvisit = input("Oh, who are you visiting? \n")
+                    if "gran" in yesvisit.lower():
+                        print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nShe's dying from cancer...'")
+                    else:
+                        print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...")
+                    print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and looks off into the distance...")
             if (i == 2):
-                print("The stranger looks at you and sniffles.  You notice that their eyes were also red and puffy.")
-                tissue = input("Would you like to offer them some tissues?")
+                if age == "young ":
+                    print("The "+age+"stranger looks at you and sniffles.  You notice that "+possessive+" eyes were also red and puffy.")
+                    tissue = input("Would you like to offer some tissues?")
+                    if "y" in tissue.lower():
+                        print(pronoun+" thanks you and blows loudly into the tissue.")
+                        print("*sniffles*")
+                        print("'You're so kind' "+pronoun+" pockets the now soaked and wrinkly tissue.")
+                        user = input("Would you like to ask "+possessive+" what is wrong?")
+                        if "y" in user.lower():
+                            print(pronoun+" looked down and says")
+                            print("'I um....I got dumped today...' "+possessive+" voice quivering as they trailed off.")
+                            print("'I don't know what I'm going to do now...We've been together for 10 months...10 WHOLE months!'")
+                            console = input("Would you like to try and help?")
+                            if "y" in user.lower():
+                                print("You give a consoling pat on "+possessive+" shoulder, and awkwardly say")
+                                print("'You'll be ok...there there...' and hand over more tissues...")
+                            else:
+                                print("You tuck away the rest of your tissues and pretend to be on your phone...")
+                        else:
+                            print("You stare awkwardly at the stranger...")
+                    else:
+                        print("You play with your pack of tissues awkwardly, while they gave you dagger eyes.")
+                else:
+                    print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou dropped your phone and "+pronoun+" makes eye contact with you...")
+                    tissue = input("Would you like to offer some tissues?")
+                    if "y" in tissue.lower():
+                        print(pronoun+" thanks you and takes the tissue.")
+                        print("*sniffles*")
+                        print("'You're so kind' "+pronoun+" wipes the tears off "+possessive+" face.")
+                        user = input("Would you like to ask "+possessive+" where "+pronoun+" is going?")
+                        if "y" in user.lower():
+                            print(pronoun+" looked down and says")
+                            print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trailed off.")
+                            print("'I don't know what I'm going to do now...I've been working at this company for 8 years...'")
+                            print(pronoun+" sighs heavily.  And looks defeated...")
+                    else:
+                        print("You try to not stare while "+pronoun+" cries...")
+                        
+            if (int == 3):
+                if age == "young ":
+                    print("You notice a child crying loudly nearby...")
+                    approach = input("Would you like to approach the child and ask what's wrong?")
+                    if "y" in tissue.lower():
+                        print("I've lost my teddy")
+
+
+            
 
         case "happy":
             username = input("The "+age+"stranger looks at you and asks you in a giddy voice. \n'Hello stranger, what's your name?'' \n")
