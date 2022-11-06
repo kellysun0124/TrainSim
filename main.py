@@ -36,7 +36,7 @@ def Interaction(start):
     print("To look around at any point please type 'look out' or 'look out the window'.")
     print("To talk to one of the passangers, please input 'talk to someone'")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
-    action = input("what would you like to do?\n")
+    action = input("what would you like to do?\n").lower
     if "talk" in action:
         Dialog(start)
     if "look" in action:
