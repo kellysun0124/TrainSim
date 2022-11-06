@@ -4,6 +4,6 @@
  Real time and based on real life scenery seen and audio recored on the [Yurikamome line](https://www.youtube.com/watch?v=7iSOMLkFizU).
  
  
-
+ Please use Python 3.10, and execute via terminal : python main.py
  If you are using windows, please use playsound ver. 1.2.2\
  Use Full screen for maximum quality and enjoyment!
