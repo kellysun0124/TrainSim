@@ -89,9 +89,9 @@ def Dialog(start_time):
                         else:
                             print("You stare awkwardly at the stranger...")
                     else:
-                        print("You play with your pack of tissues awkwardly, while they gave you dagger eyes.")
+                        print("You play with your pack of tissues awkwardly, while they give you dagger eyes.")
                 else:
-                    print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou dropped your phone and "+pronoun+" makes eye contact with you...")
+                    print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou drop your phone and "+pronoun+" makes eye contact with you...")
                     tissue = input("Would you like to offer some tissues?")
                     if "y" in tissue.lower():
                         print(pronoun+" thanks you and takes the tissue.")
