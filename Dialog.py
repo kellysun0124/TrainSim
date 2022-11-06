@@ -100,7 +100,7 @@ def Dialog(start_time):
                         user = input("Would you like to ask "+possessive+" where "+pronoun+" is going?")
                         if "y" in user.lower():
                             print(pronoun+" looked down and says")
-                            print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trailed off.")
+                            print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trails off.")
                             print("'I don't know what I'm going to do now...I've been working at this company for 8 years...'")
                             print(pronoun+" sighs heavily.  And looks defeated...")
                     else:
