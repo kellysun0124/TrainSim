@@ -5,19 +5,20 @@ import os
 from Dialog import Dialog
 import webbrowser
 
-duration = 2003
+
+duration = 2040
 
 def OpenScript():
     print("Hello! This is a text based real time train simulation made by Kelly Sun and Yvan Quinn.")
     print("The views out the window and sounds are based in real time and real life.")
-    print("Please turn up your volume.")
+    print("Please turn up your volume and full screen your terminal.")
     print("\n\nHello! You are currently at Toyosu Station, a terminal stop of the Yurikamome Line.\nThe New Transit Yurikamome is a driverless, automated transit service linking Shimbashi to Toyosu, via Odaiba across the Rainbow Bridge in Tokyo.\nYou are on your way to visit Grandma, so you'll want to get off at Shimbashi station.")
 
 def bail():
     print("The automatic doors close with a snap, and the train begins to leave the station.")
-    print("You bailed on visiting Grandma. She will be very disappointed.\nGAME OVER.")
-    exit = input("please press enter to exit now...\n")
+    print("You blew off Grandma. She will be very disappointed.\nGAME OVER.")
     exit()
+
 
 def GetOnTrain():
     print("The train has arrived, it brings about a blast of wind as it slows to a stop at the station.  The automatic doors open with a whoosh.")
@@ -35,40 +36,23 @@ def GetOnTrain():
     Interaction(start)
 
 
-stationDict = {
-    "Toyosu" : 0,
-    "Shin_Toyosu" : 3,
-    "Shijo_Mae" : 4,
-    "Ariake_Tennis_No_Mori" : 6,
-    "Ariake" : 8,
-    "Tokyo_Big_Sight" : 10,
-    "Aomi" : 12,
-    "Telecom_Center" : 14,
-    "Tokyo_International_Cruise_Terminal" : 16,
-    "Daiba" : 17,
-    "Odaiba_Kaihinkoen" : 19,
-    "Shibaura-Futo" : 25,
-    "Hinode" : 26,
-    "Takeshiba" : 28,
-    "Shiodome" : 31,
-    "Shimbashi" : 33
+timesDict = {
+    (100,124) : "Shijo Mae",
+    (195,227): "Ariake Tennis No Mori",
+    (319,342) : "Ariake",
+    (427,449) : "Tokyo Big Sight",
+    (538,569) : "Aomi",
+    (677,702): "Telecom Center",
+    (803,826) : "Tokyo International Cruise Terminal",
+    (912,936) : "Daiba",
+    (1025,1049): "Odaiba",
+    (1129,1150) : "Odaiba Kaihinkoen",
+    (1490,1511): "Shibaura-Futo",
+    (1590,1611) : "Hinode",
+    (1680,1702) : "Takeshiba",
+    (1855,1878) : "Shiodome" 
 }
 
-    "Shin_Toyosu" : 1:40-2:04,
-    "Shijo_Mae" : 3:15-3:47
-    "Ariake_Tennis_No_Mori" : 5:19-5:42
-    "Ariake" : 7:07-7:29
-    "Tokyo_Big_Sight" : 8:58-9:29
-    "Aomi" : 11:17-11:42
-    "Telecom_Center" : 13:23-13:46
-    "Tokyo_International_Cruise_Terminal" : 15:12-15:36
-    "Daiba" : 17:05-17:29,
-    "Odaiba_Kaihinkoen" : 18:49-19:10,
-    "Shibaura-Futo" : 24:50-25:11,
-    "Hinode" : 26:30-26:51,
-    "Takeshiba" : 28:00-28:22,
-    "Shiodome" : 30:55-31:18,
-    "Shimbashi" : 32:51-34:00
 
 
 
@@ -94,19 +78,19 @@ def Interaction(start):
             if elapsed < 15:
                 print("You immediately jump off the train as the doors are closing, back in Toyosu Station.")
                 bail()
-            elif elapsed > duration-30:
+            elif elapsed > duration-70 and elapsed < duration:
                 print("You step off the train into the bustling Shimbashi Station. You can't wait to give Grandma a big hug!")
                 print("~*~*~*~*~*~*~*~*~*~*~*~*~ YOU WIN ~*~*~*~*~*~*~*~*~*~*~*~*~*~")
-                exit = input("please press enter to exit now...\n")
+                input("please press enter to exit now...\n")
                 exit()
-            elif int(elapsed / 60)-1 in stationDict.values():
-                print("You step off the train into the wrong station.")
-                print("The automatic doors closes with a snap, and the train begins to leave.")
-                print("You'll spend the next " + str(2*int((duration - elapsed)/60)) + " minutes waiting around for the train to take you home.")
-                print("Grandma will be disappointed, she was really looking forward to seeing you.\nGAME OVER.")
-                exit = input("please press enter to exit now...\n")
-                exit() 
             else:
+                for (entry, exit) in timesDict.keys():
+                    if elapsed >= entry and elapsed <= exit:
+                        print("You step off the train, see the signs reading " + timesDict[(entry, exit)] + ", and realize you're in the wrong station.")
+                        print("Behind you, the automatic doors close with a snap and the train begins to leave.")
+                        print("You'll spend the next 4 minutes waiting around for the next train to take you home.")
+                        print("After you board, you'll spend the entire " + str(int(elapsed/60)) + " minute train ride feeling guilty for blowing off Grandma.")
+                        exit()
                 print("You can't do that, the doors are closed.")
         elif "homework" in action:
             webbrowser.open('http://www.geom.uiuc.edu/~barzilai/cr/sherlock.real.html')
@@ -115,9 +99,9 @@ def Interaction(start):
         else:
             print("Invalid action, please try again.")
 
-    print("\nYou missed your stop, the train has turned arround. You'll spend the next half our riding the train home in shame.")
+    print("\nYou missed your stop, and the train has turned around. You'll spend the next half our riding the train home in shame.")
     print("Grandma will be disappointed, she was really looking forward to seeing you. \nGAME OVER>")
-    exit = input("please press enter to exit now...\n")
+    input("Please press enter to exit now...\n")
     exit()
 
 
