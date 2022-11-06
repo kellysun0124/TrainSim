@@ -39,7 +39,7 @@ def Dialog(start_time):
                 input("'If that " + haha[0] + " thinks " + haha[1] + " can sleep with my " + partner + " and get away with it "+ haha[1] + "'s got another thing coming.'\n")
                 print("'I don't need your USELESS FUCKING INPUT on this, why don't you mind your own GODDAMN BUSINESS!'")
                 print("You hastily back away before the angry "+age+label+" takes a swing at you.")
-            elif (i == 1 || age == "old "):
+            elif (i == 1 or age == "old "):
                 print("The "+age+"stranger jerks " + possessive + " head up and glares at you for a moment.")
                 angryconvo = input("What? \n")
                 print("'Well that's nice. Stop bothering me.'")
