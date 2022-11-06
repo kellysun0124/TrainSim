@@ -71,7 +71,7 @@ def Dialog(start_time):
                 case 1:
                     if age == "young ":
                         print("The "+age+"stranger looks at you and sniffles.  You notice that "+possessive+" eyes are also red and puffy.")
-                        tissue = input("Would you like to offer some tissues?\n")
+                        tissue = input("Would you like to offer some tissues? ")
                         if "y" in tissue.lower():
                             print(pronoun+" thanks you and blows loudly into the tissue.")
                             print("*sniffles*")
@@ -93,12 +93,12 @@ def Dialog(start_time):
                             print("You play with your pack of tissues awkwardly, while "+pronoun+" gives you dagger eyes.")
                     else:
                         print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou drop your phone and "+pronoun+" makes eye contact with you...")
-                        tissue = input("Would you like to offer some tissues?")
+                        tissue = input("Would you like to offer some tissues? ")
                         if "y" in tissue.lower():
                             print(pronoun+" thanks you and takes the tissue.")
                             print("*sniffles*")
                             print("'You're so kind' "+pronoun+" wipes the tears off "+possessive+" face.")
-                            user = input("Would you like to ask "+possessive+" where "+pronoun+" is going?")
+                            user = input("Would you like to ask "+possessive+" where "+pronoun+" is going? ")
                             if "y" in user.lower():
                                 print(pronoun.capitalize()+" looked down and says")
                                 print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trails off.")
