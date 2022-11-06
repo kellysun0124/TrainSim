@@ -23,7 +23,7 @@ def Dialog(start_time):
     else:
         age = "ancient "
 
-    i = randint(0,3)
+    i = randint(0,4)
     match stranger.get_mood():
         case "angry":
             if(i==0):
