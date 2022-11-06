@@ -43,7 +43,7 @@ def Dialog(start_time):
                 print("The "+age+"stranger jerks " + possessive + " head up and glares at you for a moment.")
                 angryconvo = input("'What?'' \n")
                 print("'Well that's nice. Stop bothering me.'")
-                print("'The "+age+label+" goes back to what " + pronoun + " was doing and ignores you.'")
+                print("The "+age+label+" goes back to what " + pronoun + " was doing and ignores you.")
             elif (i == 2):
                 print("The "+age+"stranger briefly takes " + possessive + " eyes off " + possessive + " phone and grunts")
                 angryconvo = input("'Huh? Can't you see I'm busy?'\n")

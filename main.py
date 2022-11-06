@@ -53,6 +53,25 @@ stationDict = {
     "Shimbashi" : 33
 }
 
+    "Shin_Toyosu" : 1:40-2:04,
+    "Shijo_Mae" : 3:15-3:47
+    "Ariake_Tennis_No_Mori" : 5:19-5:42
+    "Ariake" : 7:07-7:29
+    "Tokyo_Big_Sight" : 8:58-9:29
+    "Aomi" : 11:17-11:42
+    "Telecom_Center" : 13:23-13:46
+    "Tokyo_International_Cruise_Terminal" : 15:12-15:36
+    "Daiba" : 17:05-17:29,
+    "Odaiba_Kaihinkoen" : 18:49-19:10,
+    "Shibaura-Futo" : 24:50-25:11,
+    "Hinode" : 26:30-26:51,
+    "Takeshiba" : 28:00-28:22,
+    "Shiodome" : 30:55-31:18,
+    "Shimbashi" : 32:51-34:00
+
+
+
+
     
 
 def Interaction(start):
@@ -71,7 +90,7 @@ def Interaction(start):
             windowView(start)
         elif "get off" in action:
             elapsed = time.time() - start
-            if elapsed < 14:
+            if elapsed < 15:
                 print("You immediately jump off the train as the doors are closing, back in Toyosu Station.")
                 bail()
             elif elapsed > duration-30:
