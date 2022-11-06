@@ -16,6 +16,7 @@ def OpenScript():
 def bail():
     print("The automatic doors close with a snap, and the train begins to leave the station.")
     print("You bailed on visiting Grandma. She will be very disappointed.\nGAME OVER.")
+    exit = input("please press enter to exit now...\n")
     exit()
 
 def GetOnTrain():
@@ -77,12 +78,15 @@ def Interaction(start):
             elif elapsed > duration-30:
                 print("You step off the train into the bustling Shimbashi Station. You can't wait to give Grandma a big hug!")
                 print("~*~*~*~*~*~*~*~*~*~*~*~*~ YOU WIN ~*~*~*~*~*~*~*~*~*~*~*~*~*~")
+                exit = input("please press enter to exit now...\n")
+                exit()
             elif int(elapsed / 60)-1 in stationDict.values():
                 print("You step off the train into the wrong station.")
                 print("The automatic doors closes with a snap, and the train begins to leave.")
                 print("You'll spend the next " + str(2*int((duration - elapsed)/60)) + " minutes waiting around for the train to take you home.")
                 print("Grandma will be disappointed, she was really looking forward to seeing you.\nGAME OVER.")
-                exit()
+                exit = input("please press enter to exit now...\n")
+                exit() 
             else:
                 print("You can't do that, the doors are closed.")
         elif "homework" in action:
@@ -94,6 +98,7 @@ def Interaction(start):
 
     print("\nYou missed your stop, the train has turned arround. You'll spend the next half our riding the train home in shame.")
     print("Grandma will be disappointed, she was really looking forward to seeing you. \nGAME OVER>")
+    exit = input("please press enter to exit now...\n")
     exit()
 
 
