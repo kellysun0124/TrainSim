@@ -3,7 +3,7 @@ from playsound import playsound
 import time
 from Dialog import Dialog
 
-duration = 2000
+duration = 2003
 
 def OpenScript():
     print("Hello! This is a text based real time train simulation made by Kelly Sun and Yvan Quinn.")
@@ -12,7 +12,7 @@ def OpenScript():
     print("\nHello! You are currently at Toyosu Station, a terminal stop of the Yurikamome Line.\nThe New Transit Yurikamome is a driverless, automated transit service linking Shimbashi to Toyosu, via Odaiba across the Rainbow Bridge in Tokyo.\nYou are on your way to visit Grandma, so you'll want to get off at Shimbashi station.")
 
 def bail():
-    print("The automatic doors closes with a snap, and the train begins to leave the station.")
+    print("The automatic doors close with a snap, and the train begins to leave the station.")
     print("You bailed on visiting Grandma. She will be very disappointed.\nGAME OVER.")
     exit()
 
@@ -66,11 +66,13 @@ def Interaction(start):
             windowView(start)
         elif "get off" in action:
             elapsed = time.time() - start
-            if elapsed > duration-30:
+            if elapsed < 14:
+                print("You immediately jump off the train as the doors are closing, back in Toyosu Station.")
+                bail()
+            elif elapsed > duration-30:
                 print("You step off the train into the bustling Shimbashi Station. You can't wait to give Grandma a big hug!")
                 print("~*~*~*~*~*~*~*~*~*~*~*~*~ YOU WIN ~*~*~*~*~*~*~*~*~*~*~*~*~*~")
-            elif int(elapsed / 60) in stationDict.values():
-                if(elapsed < 60): bail()
+            elif int(elapsed / 60)-1 in stationDict.values():
                 print("You step off the train into the wrong station.")
                 print("The automatic doors closes with a snap, and the train begins to leave.")
                 print("You'll spend the next " + str(2*int((duration - elapsed)/60)) + " minutes waiting around for the train to take you home.")
@@ -90,7 +92,7 @@ def Interaction(start):
 
 
 def windowView(start):
-    print(open("ascii_stills/"+str(int((time.time()-start)/10)*10)+".txt").read())
+    print(open("ascii_stills/"+str(int((time.time()-start)/2)*2)+".txt").read())
 
 
 def main():
