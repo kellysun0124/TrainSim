@@ -5,3 +5,4 @@
  https://www.youtube.com/watch?v=7iSOMLkFizU
 
  If you are using windows, please use playsound ver. 1.2.2\
+ Use Full screen for maximum quality\
