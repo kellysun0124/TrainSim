@@ -1,6 +1,7 @@
 import RandPerson
 from playsound import playsound
 import time
+import os
 from Dialog import Dialog
 
 duration = 2003
@@ -24,7 +25,10 @@ def GetOnTrain():
             break
         else:
             bail()
+
+
     playsound('audio.mp3', False)
+    
     start = time.time()
     Interaction(start)
 
