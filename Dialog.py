@@ -61,10 +61,10 @@ def Dialog(start_time):
                     print("The stranger stares blankly out of the window, as if " + pronoun + " is a thousand miles away. \nAt your greeting " + pronoun + " blinks and stares at you startled.")
                     username = input("'Oh...Hi, where are my manners. I'm sorry about that. My name is " + name + ".  What is your name?' \n")
                     visit = input("'Nice to meet you " + username + ". Are you visiting someone?' \n")
-                    if visit.lower() == "yes":
+                    if visit.lower() == "y":
                         yesvisit = input("'Oh, who are you visiting?' \n")
                         if "gran" in yesvisit.lower():
-                            print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nShe's dying from cancer...'")
+                            print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nMy gran is dying from cancer...'")
                         else:
                             print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...'")
                         print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and looks off into the distance...")
