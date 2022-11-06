@@ -1,7 +1,7 @@
 import RandPerson
 from playsound import playsound
 import time
-import Dialog
+from Dialog import Dialog
 
 def OpenScript():
     print("Hello! This is a text based real time train simulation made by Kelly Sun and Yvan Quinn.")
@@ -31,15 +31,16 @@ def GetOnTrain():
     
 
 def Interaction(start):
-    OpenScript()
     print("You look around and see many passangers around you, some reading, others with earphones on.")
     print("Sitting across from of you is a young woman and young man.")
     print("To look around at any point please type 'look out' or 'look out the window'.")
     print("To talk to one of the passangers, please input 'talk to someone'")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
-    action = input("what would you like to do?")
-    if "talk" in action.lower:
+    action = input("what would you like to do?\n").lower
+    if "talk" in action:
         Dialog(start)
+    if "look" in action:
+        windowView(start)
     
 
 
