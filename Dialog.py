@@ -39,7 +39,7 @@ def Dialog(start_time):
                 input("'If that " + haha[0] + " thinks " + haha[1] + " can sleep with my " + partner + " and get away with it "+ haha[1] + "'s got another thing coming.'\n")
                 print("'I don't need your USELESS FUCKING INPUT on this, why don't you mind your own GODDAMN BUSINESS!'")
                 print("You hastily back away before the angry "+age+label+" takes a swing at you.")
-            elif (i == 1 or age == "old "):
+            elif (i == 1 || age == "old "):
                 print("The "+age+"stranger jerks " + possessive + " head up and glares at you for a moment.")
                 angryconvo = input("What? \n")
                 print("'Well that's nice. Stop bothering me.'")
@@ -89,9 +89,9 @@ def Dialog(start_time):
                         else:
                             print("You stare awkwardly at the stranger...")
                     else:
-                        print("You play with your pack of tissues awkwardly, while they gave you dagger eyes.")
+                        print("You play with your pack of tissues awkwardly, while they give you dagger eyes.")
                 else:
-                    print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou dropped your phone and "+pronoun+" makes eye contact with you...")
+                    print("The stranger sniffles loudly, and blows into "+possessive+" t-shirt.\nYou drop your phone and "+pronoun+" makes eye contact with you...")
                     tissue = input("Would you like to offer some tissues?")
                     if "y" in tissue.lower():
                         print(pronoun+" thanks you and takes the tissue.")
@@ -100,7 +100,7 @@ def Dialog(start_time):
                         user = input("Would you like to ask "+possessive+" where "+pronoun+" is going?")
                         if "y" in user.lower():
                             print(pronoun+" looked down and says")
-                            print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trailed off.")
+                            print("'I'm just going home, I got fired today...' "+possessive+" voice quivering as "+pronoun+" trails off.")
                             print("'I don't know what I'm going to do now...I've been working at this company for 8 years...'")
                             print(pronoun+" sighs heavily.  And looks defeated...")
                     else:
@@ -120,4 +120,3 @@ def Dialog(start_time):
                     print("'\""+ans+"!\" That's rich! I tell you what, I feel like I've just been given a second chance at life.")
                     print("Trust me, you've never met such a gorgeous "+choice(["man", "woman"])+", and hot DAMN what an ass!")
                     print("You look away uncomfortably as the "+age+label+"'s eyes glaze over and they start to make groping motions with "+ possessive+ " hands.")
-
