@@ -69,11 +69,11 @@ def Interaction(start):
     while(time.time() - start < duration):
         action = input("\nWhat would you like to do?\n")
         action = action.lower()
-        if "talk" in action:
+        if "talk" in action or "speak" in action:
             Dialog(start)
-        elif "look" in action:
+        elif "look" in action or "window" in action:
             windowView(start)
-        elif "get off" in action:
+        elif "get off" in action or "leave" in action:
             elapsed = time.time() - start
             if elapsed < 15:
                 print("You immediately jump off the train as the doors are closing, back in Toyosu Station.")
@@ -92,9 +92,9 @@ def Interaction(start):
                         print("After you board, you'll spend the entire " + str(int(elapsed/60)) + " minute ride feeling guilty for blowing off Grandma.")
                         exit()
                 print("You can't do that, the doors are closed.")
-        elif "homework" in action:
+        elif "homework" in action or "study" in action:
             webbrowser.open('http://www.geom.uiuc.edu/~barzilai/cr/sherlock.real.html')
-        elif "read" in action:
+        elif "read" in action or "book" in action:
             webbrowser.open('https://www.gutenberg.org/cache/epub/66446/pg66446-images.html')
         else:
             print("Invalid action, please try again.")

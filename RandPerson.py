@@ -3,20 +3,20 @@ import time
 from Person import Person
 
 genderList = ["male", "female"]
-girlNameList = ["Alice", "Kelly", "Pheobe", "Judy", "Lisa", "Tasha", "Rachel", "Jennie", "Natlie", "Sophia"]
+girlNameList = ["Alice", "Kelly", "Pheobe", "Judy", "Lisa", "Tasha", "Rachel", "Jennie", "Natalie", "Sophia"]
 boyNameList = ["Bob", "Roger", "Yvan", "Liam", "Lucas", "James", "Quinn", "Ross", "Jaden", "Ash"]
 stationDict = {
     "Toyosu" : 0,
-    "Shin_Toyosu" : 3,
-    "Shijo_Mae" : 4,
-    "Ariake_Tennis_No_Mori" : 6,
+    "Shin Toyosu" : 3,
+    "Shijo Mae" : 4,
+    "Ariake Tennis No Mori" : 6,
     "Ariake" : 8,
-    "Tokyo_Big_Sight" : 10,
+    "Tokyo Big Sight" : 10,
     "Aomi" : 12,
-    "Telecom_Center" : 14,
-    "Tokyo_International_Cruise_Terminal" : 16,
+    "Telecom Center" : 14,
+    "Tokyo International Cruise Terminal" : 16,
     "Daiba" : 17,
-    "Odaiba_Kaihinkoen" : 19,
+    "Odaiba Kaihinkoen" : 19,
     "Shibaura-Futo" : 25,
     "Hinode" : 26,
     "Takeshiba" : 28,

@@ -121,20 +121,20 @@ def Dialog(start_time):
                         print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
                         print(possessive.capitalize() + " phone rings, so " + pronoun + " answers it and get to chatting excitedly...")
                     else:
-                        response = input("The "+age+"stranger greets you with a smile and asks, 'What can I do for you?'")
-                        print("'I'm not sure if I can really help you with that, you see I've found myself in a bit of a conundrum.")
+                        response = input("The "+age+"stranger greets you with a smile and asks, 'What can I do for you?'\n")
+                        print("'I'm not sure if I can really help you with that, you see I've found myself in a bit of a conundrum.'")
                         print("'There's a friend of mine I'd like to visit, but I've never been to " +possessive+" place. And I left my phone at home!'")
                         print("'I do remember the address, but I'm not so good with maps. I think I'm supposed to get off at "+ dest+" Station?'")
                         username = input("'Where are my manners, what's your name?' ")
-                        print("'It's great to mee you " + username + ", I'm "+ stranger.get_name()"!'")
-                        station = input("If you don't mind me asking, where are you getting off?")
-                        if dest.lower in station.lower:
+                        print("'It's great to mee you " + username + ", I'm "+ stranger.get_name()+"!'")
+                        station = input("'If you don't mind me asking, where are you getting off?' ")
+                        if dest.lower() in station.lower():
                             input("'Wow! What a coincidence! That's so great! Would you mind showing me around?' ")
                         else:
                             print("'Oh I love that area! It's just a ten minute walk to some really nice clubs.'")
                             print("'I know, why don't I show you around? My other friend's lame anyways, " + pronoun+ " never knows how to have a good time.'")
-                            input("'What do you say?'")
-                        input("'Ha! I knew you'd say yes, I'm so excited to hit the town with my new best friend! "+stranger.get_name()+" and " +username+", name a more dynamic duo!\n'")
+                            input("'What do you say?' ")
+                        input("'Ha! I knew you'd say yes, I'm so excited to hit the town with my new best friend! "+stranger.get_name()+" and " +username+", name a more dynamic duo!'\n")
                         print("'Well when you put it like that...'")
 
                 case 1:
