@@ -3,6 +3,7 @@ from playsound import playsound
 import time
 import os
 from Dialog import Dialog
+import webbrowser
 
 duration = 2003
 
@@ -57,7 +58,8 @@ stationDict = {
 def Interaction(start):
     print("\nYou look around and see many passangers around you, some reading, others with earphones on.")
     print("To look around at any point please type 'look out' or 'look out the window'.")
-    print("To talk to one of the passangers, please input 'talk to someone'")
+    print("To talk to one of the passangers, please input 'talk to someone'.")
+    print("You may also choose to read the book you brought, or do your homework.")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
 
     while(time.time() - start < duration):
@@ -83,6 +85,10 @@ def Interaction(start):
                 exit()
             else:
                 print("You can't do that, the doors are closed.")
+        elif "homework" in action:
+            webbrowser.open('http://www.geom.uiuc.edu/~barzilai/cr/sherlock.real.html')
+        elif "read" in action:
+            webbrowser.open('https://www.gutenberg.org/cache/epub/66446/pg66446-images.html')
         else:
             print("Invalid action, please try again.")
 

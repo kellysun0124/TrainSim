@@ -1,5 +1,5 @@
 from RandPerson import RandPerson
-from random import randint
+from random import randint, choice
 
 def Dialog(start_time):
     stranger = RandPerson(start_time)
@@ -7,33 +7,52 @@ def Dialog(start_time):
     if stranger.get_gender() == "male":
         pronoun = "he"
         possessive = "his"
+        label = "man"
     else:
         pronoun = "she"
         possessive = "her"
+        label = choice(['woman','lady'])
 
-    if stranger.get_age() < 30:
+    age = stranger.get_age()
+    if age < 30:
         age = "young "
-    elif stranger.get_age() < 55:
+    elif age < 55:
         age = ""
-    else:
+    elif age < 85:
         age = "old "
-    i = randint(1, 3)
+    else:
+        age = "ancient "
+
+    i = randint(3)
     match stranger.get_mood():
         case "angry":
-            if (i == 1):
+            if(i==0):
+                print("'The "+age+"stranger seems to look right through you.")
+                input("'Yes?!?' \n")
+                input("'I really don't have time for this, but I could use some advice. What's the best way to get back at someone?'\n")
+                print("The "+age+label+" stranger doesn't seem to hear what you say, and continues on.")
+                if(age == "young "):
+                    partner = choice(["girlfriend", "boyfriend", "fiancee"])
+                else:
+                    partner = choice(["wife, husband"])
+                haha = choice([("BITCH","she"),("ASSHOLE","he")])
+                input("'If that " + haha[0] + " thinks " + haha[1] + " can sleep with my " + partner + " and get away with it "+ haha[1] + "'s got another thing coming.'\n")
+                print("'I don't need your USELESS FUCKING INPUT on this, why don't you mind your own GODDAMN BUSINESS!'")
+                print("You hastily back away before the angry "+age+label+" takes a swing at you.")
+            elif (i == 1 || age == "old "):
                 print("The "+age+"stranger jerks " + possessive + " head up and glares at you for a moment.")
                 angryconvo = input("What? \n")
                 print("'Well that's nice. Stop bothering me.'")
-                print("'The "+age+"stranger goes back to what " + pronoun + " was doing and ignores you.'")
-            if (i == 2):
+                print("'The "+age+label+" goes back to what " + pronoun + " was doing and ignores you.'")
+            elif (i == 2):
                 print("The "+age+"stranger briefly takes " + possessive + " eyes off " + possessive + " phone and grunts")
                 angryconvo = input("'Huh? Can't you see I'm busy?'\n")
                 print("'Well go bother someone else, ok?'")
-                print("The "+age+"stranger takes out a pair of earphones, puts them on and returns to " + possessive + " phone.")
-            if (i == 3):
+                print("The "+age+label+"stranger takes out a pair of earphones, puts them on and returns to " + possessive + " phone.")
+            elif (i == 3):
                 print("The "+age+"stranger continues listen to music with headphones on, but glances over at you.")
                 angryconvo = input("'What do you want?'\n")
-                print("The "+age+"stranger shrugs and looks away from you. Ignoring you.")
+                print("The "+age+label+" shrugs and looks away from you. Ignoring you.")
                 print("You don't know if " + pronoun + " even heard you...")
 
         case "sad":
@@ -52,8 +71,19 @@ def Dialog(start_time):
                 tissue = input("Would you like to offer them some tissues?")
 
         case "happy":
-            username = input("The "+age+"stranger looks at you and asks you in a giddy voice. \n'Hello stranger, what's your name?'' \n")
-            visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going?' \n")
-            print(name + " laughs happily. \n'I'm gonna go shopping in the Ginza district!'")
-            print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
-            print(possessive + " phone rings, so " + pronoun + " answers it and get to chatting excitedly...")
+            match i:
+                case 0:
+                    username = input("The "+age+"stranger looks at you and asks you in a giddy voice: \n'Hello stranger, what's your name?' \n")
+                    visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going?' \n")
+                    print(name + " laughs happily. \n'I'm gonna go shopping in the Ginza district!'")
+                    print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
+                    print(possessive + " phone rings, so " + pronoun + " answers it and get to chatting excitedly...")
+                case 1:
+                    print("Before you get a chance to introduce yourself, the "+age+"stranger grabs you by the hand and asks you,")
+                    ans = input("'Have you ever been in love?\n'")
+                    print("'\""+ans+"!\" That's rich! I tell you what, I feel like I've just been given a second chance at life.")
+                    print("Trust me, you've never met such a gorgeous "+choice(["man", "woman"])+", and hot DAMN what an ass!")
+                    print("You look away uncomfortably as the "+age+label+"'s eyes glaze over and they start to make groping motions with "+ possessive+ " hands.")
+                case 2:
+                    
+
