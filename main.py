@@ -3,6 +3,8 @@ from playsound import playsound
 import time
 from Dialog import Dialog
 
+duration = 2000
+
 def OpenScript():
     print("Hello! This is a text based real time train simulation made by Kelly Sun and Yvan Quinn.")
     print("The views out the window and sounds are based in real time and real life.")
@@ -20,28 +22,38 @@ def GetOnTrain():
             exit()
     playsound('audio.mp3', False)
     start = time.time()
-    while(time.time() - start < 2000):
-        Interaction(start)
-    print("You missed your stop, the train has turned arround. You'll spend the next half our riding the train home in shame.")
-    print("Grandma will be very disappointed.\nGAME OVER>")
-    exit()
+    Interaction(start)
+
 
 
 
     
 
 def Interaction(start):
-    print("You look around and see many passangers around you, some reading, others with earphones on.")
+    print("\nYou look around and see many passangers around you, some reading, others with earphones on.")
     print("Sitting across from of you is a young woman and young man.")
     print("To look around at any point please type 'look out' or 'look out the window'.")
     print("To talk to one of the passangers, please input 'talk to someone'")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
-    action = input("what would you like to do?\n")
-    action = action.lower()
-    if "talk" in action:
-        Dialog(start)
-    if "look" in action:
-        windowView(start)
+
+    while(time.time() - start < duration):
+        action = input("\nWhat would you like to do?\n")
+        action = action.lower()
+        if "talk" in action:
+            Dialog(start)
+        elif "look" in action:
+            windowView(start)
+        elif "get off" in action:
+            if time.time() - start > 1960:
+                print("You step off the train into the bustling Shimbashi Station. You can't wait to give Grandma a big hug! \n YOU WIN")
+        else:
+            print("Invalid action, please try again")
+
+    print("You missed your stop, the train has turned arround. You'll spend the next half our riding the train home in shame.")
+    print("Grandma will be very disappointed.\nGAME OVER>")
+    exit()
+
+
     
 
 
