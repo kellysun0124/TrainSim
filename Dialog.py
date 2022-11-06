@@ -64,9 +64,9 @@ def Dialog(start_time):
                     if visit.lower() == "y":
                         yesvisit = input("'Oh, who are you visiting?' \n")
                         if "gran" in yesvisit.lower():
-                            print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nMy gran is dying from cancer...'")
+                            print(name + " chokes, 'Oh... I'm on my way to visit mine too... in the hospital... \nMy Gran Gran is dying from cancer...'")
                         else:
-                            print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...'")
+                            print(name + "chokes, 'Oh... I'm on my way to my grandmother... in the hospital...\nShe's dying from cancer...'")
                         print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and looks off into the distance...")
                 case 1:
                     if age == "young ":
