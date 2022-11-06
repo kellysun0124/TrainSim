@@ -19,7 +19,7 @@ def Dialog(start_time):
     elif age < 55:
         age = ""
     elif age < 85:
-        age = "old "
+        age = choice(["old ", "elderly "])
     else:
         age = "ancient "
 
