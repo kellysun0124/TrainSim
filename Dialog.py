@@ -1,11 +1,10 @@
 from RandPerson import RandPerson
-import random
+from random import randint
 
 def Dialog(start_time):
     stranger = RandPerson(start_time)
     name = stranger.get_name()
-    i = random.ranint(1, 3)
-
+    i = randint(1, 3)
     match stranger.get_mood():
         case "angry":
             if (i == 1):
@@ -37,11 +36,9 @@ def Dialog(start_time):
             else:
                 print(name + "chokes, 'Oh... I'm on my way to my Granmother... in the hospital...\nShe's dying from cancer...")
             print("You offer your condolences, but an awkward silence falls.\n" + name + " starts to cry quietly and moves away from you...")           
-        
         case "happy":
             username = input("The stranger looked at you and asks you in a giddy voice. \n'Hello stranger, what's your name?'' \n")
             visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going? \n'")
             print("The stranger laughs happily. \n'I'm gonna go shopping in the Ginza district!'")
             print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
             print(name + "'s phone rings, so they answer it and get to chatting excitedly...")
-            
