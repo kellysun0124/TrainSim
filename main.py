@@ -10,7 +10,7 @@ def OpenScript():
     print("Hello! This is a text based real time train simulation made by Kelly Sun and Yvan Quinn.")
     print("The views out the window and sounds are based in real time and real life.")
     print("Please turn up your volume.")
-    print("\nHello! You are currently at Toyosu Station, a terminal stop of the Yurikamome Line.\nThe New Transit Yurikamome is a driverless, automated transit service linking Shimbashi to Toyosu, via Odaiba across the Rainbow Bridge in Tokyo.\nYou are on your way to visit Grandma, so you'll want to get off at Shimbashi station.")
+    print("\n\nHello! You are currently at Toyosu Station, a terminal stop of the Yurikamome Line.\nThe New Transit Yurikamome is a driverless, automated transit service linking Shimbashi to Toyosu, via Odaiba across the Rainbow Bridge in Tokyo.\nYou are on your way to visit Grandma, so you'll want to get off at Shimbashi station.")
 
 def bail():
     print("The automatic doors close with a snap, and the train begins to leave the station.")
@@ -56,7 +56,6 @@ stationDict = {
 
 def Interaction(start):
     print("\nYou look around and see many passangers around you, some reading, others with earphones on.")
-    print("Sitting across from of you is a young woman and young man.")
     print("To look around at any point please type 'look out' or 'look out the window'.")
     print("To talk to one of the passangers, please input 'talk to someone'")
     print("To get off the train at any point, please input 'get off' or 'get off the train'")
@@ -105,6 +104,4 @@ def main():
     
 main()
 
-    
 
-main()
