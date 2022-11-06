@@ -25,3 +25,6 @@ class Person:
     def get_mood(self):
         return self.__mood
 
+    def get_gender(self):
+        return self.__gender
+

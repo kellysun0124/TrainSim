@@ -84,6 +84,4 @@ def Dialog(start_time):
                     print("'\""+ans+"!\" That's rich! I tell you what, I feel like I've just been given a second chance at life.")
                     print("Trust me, you've never met such a gorgeous "+choice(["man", "woman"])+", and hot DAMN what an ass!")
                     print("You look away uncomfortably as the "+age+label+"'s eyes glaze over and they start to make groping motions with "+ possessive+ " hands.")
-                case 2:
-                    
 
