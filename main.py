@@ -88,8 +88,8 @@ def Interaction(start):
                     if elapsed >= entry and elapsed <= exit:
                         print("You step off the train, see the signs reading " + timesDict[(entry, exit)] + ", and realize you're in the wrong station.")
                         print("Behind you, the automatic doors close with a snap and the train begins to leave.")
-                        print("You'll spend the next 4 minutes waiting around for the next train to take you home.")
-                        print("After you board, you'll spend the entire " + str(int(elapsed/60)) + " minute train ride feeling guilty for blowing off Grandma.")
+                        print("It will be 4 minutes until the next train arrives to take you home.")
+                        print("After you board, you'll spend the entire " + str(int(elapsed/60)) + " minute ride feeling guilty for blowing off Grandma.")
                         exit()
                 print("You can't do that, the doors are closed.")
         elif "homework" in action:
