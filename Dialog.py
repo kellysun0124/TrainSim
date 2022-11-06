@@ -110,11 +110,33 @@ def Dialog(start_time):
         case "happy":
             match i % 2:
                 case 0:
-                    username = input("The "+age+"stranger looks at you and asks you in a giddy voice: \n'Hello stranger, what's your name?' \n")
-                    visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going?' \n")
-                    print(name + " laughs happily. \n'I'm gonna go shopping in the Ginza district!'")
-                    print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
-                    print(possessive.capitalize() + " phone rings, so " + pronoun + " answers it and get to chatting excitedly...")
+                    dest = stranger.get_destination()
+                    if dest == "Shimbashi":
+                        username = input("The "+age+"stranger looks at you and asks you in a giddy voice: \n'Hello stranger, what's your name?' \n")
+                        visit = input("'Nice to meet you " + username + ", I'm " + name + ". Where are you going?' \n").lower()
+                        if "shimbashi" in visit:
+                            print(name + " laughs happily. \n'Me too! I'm gonna go shopping in the Ginza district!'")
+                        else:
+                            print(name + " laughs happily. \n'I'm gonna go shopping in the Ginza district!'")
+                        print(name + " looks around and leans in to whisper... \n'I JUST WON THE LOTTERY!!!'")
+                        print(possessive.capitalize() + " phone rings, so " + pronoun + " answers it and get to chatting excitedly...")
+                    else:
+                        response = input("The "+age+"stranger greets you with a smile and asks, 'What can I do for you?'")
+                        print("'I'm not sure if I can really help you with that, you see I've found myself in a bit of a conundrum.")
+                        print("'There's a friend of mine I'd like to visit, but I've never been to " +possessive+" place. And I left my phone at home!'")
+                        print("'I do remember the address, but I'm not so good with maps. I think I'm supposed to get off at "+ dest+" Station?'")
+                        username = input("'Where are my manners, what's your name?' ")
+                        print("'It's great to mee you " + username + ", I'm "+ stranger.get_name()"!'")
+                        station = input("If you don't mind me asking, where are you getting off?")
+                        if dest.lower in station.lower:
+                            input("'Wow! What a coincidence! That's so great! Would you mind showing me around?' ")
+                        else:
+                            print("'Oh I love that area! It's just a ten minute walk to some really nice clubs.'")
+                            print("'I know, why don't I show you around? My other friend's lame anyways, " + pronoun+ " never knows how to have a good time.'")
+                            input("'What do you say?'")
+                        input("'Ha! I knew you'd say yes, I'm so excited to hit the town with my new best friend! "+stranger.get_name()+" and " +username+", name a more dynamic duo!\n'")
+                        print("'Well when you put it like that...'")
+
                 case 1:
                     print("Before you get a chance to introduce yourself, the "+age+"stranger grabs you by the hand and asks you,")
                     ans = input("'Have you ever been in love?'\n")
