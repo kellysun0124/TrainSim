@@ -30,4 +30,4 @@ def Dialog(start_time):
             print("The stranger laughs happily.\n'I'm gonna go shopping in Ginza!'")
             print(stranger.name + "looks around and lean in to whisper\n'I just won the lottery!!!'")
             print("The strangers phone rings so they answered it excitedly and got to chatting on the phone...")
-            
+
