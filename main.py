@@ -79,9 +79,9 @@ def Interaction(start):
                 print("You immediately jump off the train as the doors are closing, back in Toyosu Station.")
                 bail()
             elif elapsed > duration-70 and elapsed < duration:
-                print("You step off the train into the bustling Shimbashi Station. You can't wait to give Grandma a big hug!")
+                print("You step off the train into the bustling Shimbashi Station. There's Grandma standing on the platform, waiting for you with arms outstretched!")
                 print("~*~*~*~*~*~*~*~*~*~*~*~*~ YOU WIN ~*~*~*~*~*~*~*~*~*~*~*~*~*~")
-                input("please press enter to exit now...\n")
+                input("Press enter to hug Grandma")
                 exit()
             else:
                 for (entry, exit) in timesDict.keys():
